@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Insert</title>
+</head>
+
+<body>
+    <div class="container p-5">
+        <h2>Add Vehicle</h2>
+        <form method="post" enctype="multipart/form-data" action="/create">
+            <div class="col-md-6">
+                <label for="brand">Brand Name</label>
+                <input type="text" name="brand" id="brand" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="categoryName">Category</label>
+                <select name="categoryName" id="category-name" class="form-control">
+                    <option value="" selected>Select Category</option>
+                    <% categories.forEach((category)=>{ %>
+                        <option value="<%=category.categoryName %>">
+                            <%=category.categoryName %>
+                        </option>
+                        <% })%>
+                </select>
+            </div>
+            <div class="col-md-6 pt-2">
+                <label for="vehiclePicture">Choose image</label>
+                <input type="file" name="vehiclePicture" id="vehiclePicture" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="noofyears">Number of Years</label>
+                <input type="number" name="noofyears" id="noofyears" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="deprication">Deprication</label>
+                <input type="number" name="deprication" id="deprication" class="form-control">
+            </div>
+
+            <div class="col-md-6 mt-2">
+                <input type="submit" value="Submit" class="btn btn-outline-primary">
+            </div>
+        </form>
+    </div>
+</body>
+<script src="/js/bootstrap.min.js"></script>
+
+</html>

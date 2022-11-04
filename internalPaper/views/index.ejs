@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Index</title>
+</head>
+
+<body>
+    <div class="container p-5">
+
+        <a href="/insert" class="btn btn-outline-primary p-2 mb-2">Add Vehicle Details</a>
+
+        <h2>Vehicle Details</h2>
+        <table class="table">
+            <thead>
+                <tr class="table-secondary">
+                    <th scope="col">Brand Name</th>
+                    <th scope="col">Vehicle Category</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">deprication</th>
+                    <th scope="col">No. of Years</th>
+                    <th scope="col">totalPrice</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% allVehicles.forEach((vehicle)=>{ %>
+                    <tr>
+                        <td>
+                            <%=vehicle.vehicleBrand %>
+                        </td>
+                        <td>
+                            <%=vehicle.categoryName %>
+                        </td>
+                        <td>
+                            <img src="<%=vehicle.vehiclePicture %>" width="200">
+                        </td>
+                        <td>
+                            <%= vehicle.price %>
+                        </td>
+                        <td>
+                            <%= vehicle.deprication %>
+                        </td>
+                        <td>
+                            <%= vehicle.noofyears %>
+                        </td>
+                        <td>
+                            <%= vehicle.totalPrice %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="/js/bootstrap.min.js"></script>
+
+</html>

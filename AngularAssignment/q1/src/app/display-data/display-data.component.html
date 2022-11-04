@@ -1,0 +1,41 @@
+<h3>Display Integer String and Date in a component
+</h3>
+<div class="container p-5">
+    <div class="d-flex">
+        <button class="btn btn-outline-primary" (click)="increment()">Increment by 1</button>
+        <h2 class="px-4">{{num1}}</h2>
+    </div>
+    <div class="py-3">
+        <h3>Array Of Fruits</h3>
+        <ol class="list">
+            <i>
+                <li class="list-item" *ngFor="let fruit of fruits">{{fruit}}</li>
+            </i>
+        </ol>
+    </div>
+    <div class="col-md-6">
+        <!-- <h3>Fruits in dropdown</h3>
+        <form [formGroup]="comboControl">
+            <input type="text" name="item" id="item" formControlName="item" class="form-control">
+            <select name="dropdown" class="form-control" id="dropdown">
+                <option value="">Select Value</option>
+                <option value="{{fruit}}" *ngFor="let fruit of fruits">{{fruit}}</option>
+            </select>
+
+        </form> -->
+    </div>
+    <div class="col-md-6">
+        <form [formGroup]="myForm">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+            <label for="email">Email</label>
+            <input type="email" formControlName="email" class="form-control" name="email" id="email">
+            <input type="button" (click)="onSubmit()" value="Submit" class="btn btn-outline-primary">
+        </form>
+    </div>
+    <div *ngIf="submitted">
+        <h2>User Details</h2>
+        {{myForm.value.name}}
+        {{myForm.value.name}}
+    </div>
+</div>
