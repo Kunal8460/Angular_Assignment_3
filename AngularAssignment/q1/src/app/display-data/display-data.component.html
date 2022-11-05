@@ -1,6 +1,13 @@
 <h3>Display Integer String and Date in a component
 </h3>
 <div class="container p-5">
+    <div class="row">
+        <h4>Today's Date (fullDate) : {{currentDate | date:'fullDate'}}</h4>
+        <h4>Today's Date(shortDate) : {{currentDate | date:'shortDate'}}</h4>
+        <h4>Today's Date(mediumDate) : {{currentDate | date:'mediumDate'}}</h4>
+        <!-- <h4>Time Today : {{currentDate | date:'h:mm a'}}</h4> -->
+        <h4>Time Today : {{currentDate | date:'h:mm:ss a z'}}</h4>
+    </div>
     <div class="d-flex">
         <button class="btn btn-outline-primary" (click)="increment()">Increment by 1</button>
         <h2 class="px-4">{{num1}}</h2>
@@ -30,12 +37,12 @@
             <input type="text" class="form-control" id="name" formControlName="name">
             <label for="email">Email</label>
             <input type="email" formControlName="email" class="form-control" name="email" id="email">
-            <input type="button" (click)="onSubmit()" value="Submit" class="btn btn-outline-primary">
+            <input type="button" (click)="onSubmit()" value="Submit" class=" mt-2 btn btn-outline-primary">
         </form>
     </div>
     <div *ngIf="submitted">
         <h2>User Details</h2>
-        {{myForm.value.name}}
-        {{myForm.value.name}}
+        <p><strong>NAME :</strong> {{myForm.value.name}}</p>
+        <p><strong>EMAIL :</strong> {{myForm.value.email}}</p>
     </div>
 </div>

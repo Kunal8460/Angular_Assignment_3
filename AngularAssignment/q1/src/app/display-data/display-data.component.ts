@@ -16,6 +16,7 @@ export class DisplayDataComponent implements OnInit {
   myForm: FormGroup;
   comboControl: FormGroup
   searchVal: any;
+  currentDate: number = Date.now()
   constructor(private fb: FormBuilder) {
     this.myForm = this.fb.group({
       name: '',
