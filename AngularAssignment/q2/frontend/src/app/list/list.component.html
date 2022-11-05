@@ -1,14 +1,19 @@
 <h2>Products</h2>
 
-<div class="container p-2">
+
+<div class="container my-4">
     <div class="row">
-        <div *ngFor="let product of listOfProducts" class="col-lg my-2">
-            <div class="card" style="width: 23rem;height: max-content;">
-                <img src="../../assets/images/1667546426919Hyundai_i20.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{product.prodName}}</h5>
-                    <p class="card-text">{{product.prodPrice}}</p>
-                    <a [routerLink]="['/Product',product._id]" class="btn btn-warning">Open</a>
+        <div class="col-xs-12">
+            <div class="row">
+                <div *ngFor="let product of listOfProducts" class="col-md-4">
+                    <div class="card my-2" style="width: 23rem;height: max-content;">
+                        <img src="../../assets/images/testing.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{product.prodName}}</h5>
+                            <p class="card-text">{{product.prodPrice}}</p>
+                            <a [routerLink]="['/Product',product._id]" class="btn btn-warning">Open</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-6 ">
         <div class="card rounded-4 bg-light">
-            <img src="../../assets/images/1667546426919Hyundai_i20.jpg" class=" rounded-4" alt="">
+            <img src="../../assets//images/testing.jpg" class=" rounded-4" alt="">
         </div>
     </div>
     <div *ngIf="isData" class="col-md-6" style="height:25rem;">
@@ -17,10 +17,10 @@
             <h4>Category</h4>
             <p>{{productDetails.prodCategory}}</p>
             <div>
-                <button [routerLink]="['/editProduct/','productDetails._id']" routerLinkActive="router-link-active"
+                <button [routerLink]="['/editProduct/',productDetails._id]" routerLinkActive="router-link-active"
                     class="btn btn-warning px-3">Edit</button>
-                <button [routerLink]="['/deleteProduct/','productDetails._id']" routerLinkActive="router-link-active"
-                    class="btn btn-warning mx-2 px-3">Delete</button>
+                <button [routerLink]="['/deleteProduct/',productDetails._id]" routerLinkActive="router-link-active"
+                    class="btn btn-danger mx-2 px-3">Delete</button>
             </div>
         </div>
     </div>

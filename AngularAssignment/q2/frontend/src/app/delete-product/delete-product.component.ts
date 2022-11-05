@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { HtmlParser } from '@angular/compiler';
+
 @Component({
-  selector: 'app-single-product',
-  templateUrl: './single-product.component.html',
-  styleUrls: ['./single-product.component.css']
+  selector: 'app-delete-product',
+  templateUrl: './delete-product.component.html',
+  styleUrls: ['./delete-product.component.css']
 })
-export class SingleProductComponent implements OnInit {
+export class DeleteProductComponent implements OnInit {
 
   productDetails: any;
   isData: boolean = false;
   constructor(private route: ActivatedRoute,
-    private router: Router, private http: HttpClient) { }
+    private router: Router, private http: HttpClient,) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(async (param) => {
@@ -22,6 +22,12 @@ export class SingleProductComponent implements OnInit {
       })
     })
   }
+  delete(id: any) {
+    // console.log(id)
+    this.http.delete("http://localhost:3000/deleteProduct/" + id).subscribe((data) => {
+      console.log("Data Deleted ", data)
+    })
+    this.router.navigate([''])
+  }
 
 }
-

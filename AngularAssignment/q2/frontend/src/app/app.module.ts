@@ -6,14 +6,18 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { SingleProductComponent } from './single-product/single-product.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { EditProductComponent } from './edit-product/edit-product.component';
+import { DeleteProductComponent } from './delete-product/delete-product.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     AddProductComponent,
-    SingleProductComponent
+    SingleProductComponent,
+    EditProductComponent,
+    DeleteProductComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import { Route, Router } from '@angular/router';
 export class AddProductComponent implements OnInit {
 
   addProductGroup: FormGroup;
+  imageName: String = '';
   constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
     this.addProductGroup = this.fb.group({
       prodName: '',

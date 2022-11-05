@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center pt-4 ">
     <div class="col-md-6">
         <h2>Add Product</h2>
-        <form [formGroup]="addProductGroup" method="post">
+        <form [formGroup]="addProductGroup" enctype="multipart/form-data" method="post">
             <div class="mb-3">
                 <label for="prodName" class="form-label">Product Name</label>
                 <input type="text" formControlName="prodName" class="form-control" id="prodName">
@@ -18,6 +18,10 @@
                 <label for="prodCategory" class="form-label">Product Category</label>
                 <input type="text" formControlName="prodCategory" class="form-control" id="prodCategory">
             </div>
+            <!-- <div class="mb-3">
+                <label for="prodImage" class="form-label">Product Image</label>
+                <input type="file" formControlName="prodImage" class="form-control" id="prodImage">
+            </div> -->
             <div class="mb-3">
                 <input type="submit" value="Save" (click)="onSubmit()" class="form-control btn btn-warning">
             </div>

@@ -1,4 +1,5 @@
 const router = require("express").Router()
+const upload = require("../config/imageUpload")
 const { Products, Categories } = require("../models/models")
 
 router.get("/getAllProducts", async (req, res) => {
